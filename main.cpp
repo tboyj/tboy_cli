@@ -19,8 +19,8 @@ std::string returnInput = {};
 int main() {
     std::cout << "Hello World!" << "\n";
     while (returnInput != "exit" && returnInput != "quit") {
-        std::cout << "$" << " ";
-        std::cin >> returnInput;
+        std::cout << "$ ";
+        std::getline(std::cin, returnInput);
     }
     return 0;
 }
