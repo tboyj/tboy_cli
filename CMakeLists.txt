@@ -9,5 +9,7 @@ add_executable(tboy_cli main.cpp
         utils/cliutils.cpp
         utils/cliutils.h
         utils/utils.cpp
-        utils/utils.h)
+        utils/utils.h
+        testing/testfile.cpp
+        testing/testfile.h)
 
