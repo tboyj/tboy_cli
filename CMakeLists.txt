@@ -5,5 +5,9 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(tboy_cli main.cpp
         utils/stringutils.h
-        utils/stringutils.cpp)
+        utils/stringutils.cpp
+        utils/cliutils.cpp
+        utils/cliutils.h
+        utils/utils.cpp
+        utils/utils.h)
 

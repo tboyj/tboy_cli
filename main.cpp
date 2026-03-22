@@ -1,4 +1,3 @@
-#include <cstring>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -7,8 +6,8 @@
 
 #include "utils/stringutils.h"
 
-void testMap(std::vector<std::string> strList) {
-    std::map<std::string, std::string> strMap = utils::vectorStringMap(strList);
+void testMap(const std::vector<std::string>& strList) {
+    std::map<std::string, std::string> strMap = utils::stringutils::vectorStringMap(strList);
 
     if (strMap.contains("Hello")) {
         std::cout << "VALUE: " << strMap.at("Hello") << std::endl;
@@ -20,7 +19,7 @@ void testMap(std::vector<std::string> strList) {
 
 void testSplit() {
     std::string str = "Hello=World!";
-    std::vector<std::string> strList = utils::split(str,'=');
+    std::vector<std::string> strList = utils::stringutils::split(str,'=');
 
     for (std::string& s : strList) {
         std::cout << "[" << s << "],";
@@ -31,7 +30,7 @@ void testSplit() {
 }
 
 void testTCA() {
-    std::vector<char> helloArray = utils::toCharArray("Hello world!");
+    std::vector<char> helloArray = utils::stringutils::toCharArray("Hello world!");
     for (char& c : helloArray) {
         std::cout << "[" << c << "],";
     }
@@ -60,9 +59,9 @@ int main() {
         }
     }
 
-    for (const std::string& line : configuration) {
+    for (const std::string& basic_string : configuration) {
 
-        std::cout << line << std::endl;
+        std::cout << basic_string << std::endl;
 
     }
 
