@@ -11,5 +11,12 @@ add_executable(tboy_cli main.cpp
         utils/utils.cpp
         utils/utils.h
         testing/testfile.cpp
-        testing/testfile.h)
+        testing/testfile.h
+        commands/command.h
+        commands/commandreg.h
+        commands/commandreg.cpp
+        commands/help.cpp
+        commands/help.h
+        commands/command.cpp)
 
+install(TARGETS tboy_cli DESTINATION /usr/local/bin)

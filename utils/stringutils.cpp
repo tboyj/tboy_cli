@@ -38,6 +38,16 @@ namespace utils {
             for (int i = 0; i + 1 < text.size(); i++) {
                 result.insert(std::pair<std::string, std::string>(text.at(i), text.at(i + 1)));
             }
+
+            /*
+             * potential improvement
+             * ::
+             *   for (int i = 0; i + 1 < text.size(); i += 2) {
+                    result[text[i]] = text[i + 1]; // cleaner than insert + pair
+                }
+                ::
+             */
+
         } else {
             std::cerr << "Not enough valid key-value pairs" << std::endl;
         }
