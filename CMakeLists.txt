@@ -17,6 +17,12 @@ add_executable(tboy_cli main.cpp
         commands/commandreg.cpp
         commands/help.cpp
         commands/help.h
-        commands/command.cpp)
+        commands/command.cpp
+        commands/split.cpp
+        commands/split.h
+        commands/tca.cpp
+        commands/tca.h
+        commands/vsm.cpp
+        commands/vsm.h)
 
 install(TARGETS tboy_cli DESTINATION /usr/local/bin)

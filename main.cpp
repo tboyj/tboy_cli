@@ -13,6 +13,9 @@
 #include "commands/command.h"
 #include "commands/commandreg.h"
 #include "commands/help.h"
+#include "commands/split.h"
+#include "commands/tca.h"
+#include "commands/vsm.h"
 #include "testing/testfile.h"
 
 /*
@@ -34,7 +37,12 @@ int main(int argc, char* argv[]) {
 
     commands::CommandReg registry;
     registry.registerCommand(std::make_unique<commands::Help>());
+    registry.registerCommand(std::make_unique<commands::Split>());
+    registry.registerCommand(std::make_unique<commands::Tca>());
+    registry.registerCommand(std::make_unique<commands::Vsm>());
+
     std::string cmd = argv[1];
+
     std::vector<std::string> args(argv+2, argv+argc);
     registry.execute(cmd,args);
 

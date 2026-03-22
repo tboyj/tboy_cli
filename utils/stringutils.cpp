@@ -8,7 +8,7 @@
 #include <string>
 #include <vector>
 
-namespace utils {
+namespace utils::stringutils {
     std::vector<char> toCharArray(const std::string& text) {
         std::vector<char> result;
         for (char i : text) {
