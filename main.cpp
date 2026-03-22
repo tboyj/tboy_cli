@@ -15,6 +15,7 @@
 #include "commands/help.h"
 #include "commands/split.h"
 #include "commands/tca.h"
+#include "commands/time.h"
 #include "commands/vsm.h"
 #include "testing/testfile.h"
 
@@ -40,6 +41,7 @@ int main(int argc, char* argv[]) {
     registry.registerCommand(std::make_unique<commands::Split>());
     registry.registerCommand(std::make_unique<commands::Tca>());
     registry.registerCommand(std::make_unique<commands::Vsm>());
+    registry.registerCommand(std::make_unique<commands::Time>());
 
     std::string cmd = argv[1];
 
