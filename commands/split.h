@@ -14,8 +14,6 @@ namespace commands
         std::string name() const override { return "split"; };
         std::string description() const override { return "Splits input into an array based on the delimiter"; };
         void execute(const std::vector<std::string>& args) override;
-        std::string returnName() override { return name(); }
-        std::string returnDescription() override { return description(); }
     };
 } // commands
 

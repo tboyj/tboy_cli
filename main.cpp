@@ -17,7 +17,6 @@
 #include "commands/tca.h"
 #include "commands/time.h"
 #include "commands/vsm.h"
-#include "testing/testfile.h"
 
 /*
 * TBOY CLI

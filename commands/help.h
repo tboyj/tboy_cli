@@ -14,8 +14,6 @@ namespace commands
         std::string name() const override { return "help"; }
         std::string description() const override { return "print help information"; }
         void execute(const std::vector<std::string>& args) override;
-        std::string returnName() override { return name(); }
-        std::string returnDescription() override { return description(); }
     };
 } // commands
 

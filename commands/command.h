@@ -16,14 +16,7 @@ namespace commands
         virtual std::string name() const = 0;
         virtual std::string description() const = 0;
         virtual void execute(const std::vector<std::string>& args) = 0;
-        virtual std::string returnName()
-        {
-            return name();
-        }
-        virtual std::string returnDescription()
-        {
-            return description();
-        }
+
     };
 }
 #endif //TBOY_CLI_COMMAND_H

@@ -10,8 +10,6 @@ add_executable(tboy_cli main.cpp
         utils/cliutils.h
         utils/utils.cpp
         utils/utils.h
-        testing/testfile.cpp
-        testing/testfile.h
         commands/command.h
         commands/commandreg.h
         commands/commandreg.cpp
@@ -25,6 +23,9 @@ add_executable(tboy_cli main.cpp
         commands/vsm.cpp
         commands/vsm.h
         commands/time.cpp
-        commands/time.h)
+        commands/time.h
+        commands/calculator/calculator.cpp
+        commands/calculator/calculator.h
+)
 
 install(TARGETS tboy_cli DESTINATION /usr/local/bin)
